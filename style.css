@@ -1,3 +1,4 @@
+
 *{
     padding: 0;
     margin: 0;
@@ -12,8 +13,89 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/*Adicionando efeitos e ao Titulo*/
+.titulo {
+    font-size: 50px;
+    background: linear-gradient(to right, #4a6403, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animacao-texto 2s infinite alternate;
+}
+
+@keyframes animacao-texto {
+    0% { letter-spacing: 1px; }
+    100% { letter-spacing: 5px; }
+}
+
+/*Configurando o BOTÃO e adicionando efeitos*/
+button{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    background-color: #a5a453;
+    color: #ffff;
+}
+
+button:hover{     
+    background-color: #8a8945;
+    
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+/*Configurando a calculadora*/
 .box{
     position: absolute;
     background-color: #2e2e2e;
     top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.tela{
+    background-color: #ffff;
+    height: 30px;
+    color: #000;
+    font-size: 25px;
+    text-align: end;
+    margin: 3px;
 }

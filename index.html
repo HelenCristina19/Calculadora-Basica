@@ -7,44 +7,46 @@
     <title>Calculadora</title>
 </head>
 <body>
-    
+
+    <h1 class="titulo">Calculadora Básica Virtual</h1>
+
     <div class="box">
         <h1>Calculadora</h1>
-        <div class="tela"></div>
+        <div class="tela">1234</div>
         <table>
             <tr>
                 <td><Button>C</Button></td>
                 <td><Button><</Button></td>
-                <td><Button>/</Button></td>
-                <td><Button>x</Button></td>
+                <td><Button onclick="inserir('/')">/</Button></td>
+                <td><Button onclick="inserir('*')">x</Button></td>
             </tr>
             <tr>
-                <td><Button>7</Button></td>
-                <td><Button>8</Button></td>
-                <td><Button>9</Button></td>
-                <td><Button>-</Button></td>
+                <td><Button onclick="inserir('7')">7</Button></td>
+                <td><Button onclick="inserir('8')">8</Button></td>
+                <td><Button onclick="inserir('9')">9</Button></td>
+                <td><Button onclick="inserir('-')">-</Button></td>
             </tr>
             <tr>
-                <td><Button>4</Button></td>
-                <td><Button>5</Button></td>
-                <td><Button>6</Button></td>
-                <td><Button>+</Button></td>
+                <td><Button onclick="inserir('4')">4</Button></td>
+                <td><Button onclick="inserir('5')">5</Button></td>
+                <td><Button onclick="inserir('6')">6</Button></td>
+                <td><Button onclick="inserir('+')">+</Button></td>
             </tr>
             <tr>
-                <td><Button>1</Button></td>
-                <td><Button>2</Button></td>
-                <td><Button>3</Button></td>
-                <td rowspan="2"><Button>=</Button></td>
+                <td><Button onclick="inserir('1')">1</Button></td>
+                <td><Button onclick="inserir('2')">2</Button></td>
+                <td><Button onclick="inserir('3')">3</Button></td>
+                <td rowspan="2"><Button class="glow-on-hover" type="button" style="height: 102px; background-color: rgb(168, 138, 40);">=</Button></td>
             </tr>
             <tr>
-                <td colspan="2"><Button>0</Button></td>
-                <td><Button>.</Button></td>
+                <td colspan="2"><Button style="width: 102px" onclick="inserir('0')">0</Button></td>
+                <td><Button onclick="inserir('.')">.</Button></td>
             </tr>
         </table>
 
         <span>&copy;HelenCristina</span>
 
     </div>
-
 </body>
+<script src="script.js"></script>
 </html>
