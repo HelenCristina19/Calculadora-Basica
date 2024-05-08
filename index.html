@@ -12,11 +12,11 @@
 
     <div class="box">
         <h1>Calculadora</h1>
-        <div class="tela">1234</div>
+        <div class="tela"></div>
         <table>
             <tr>
                 <td><Button onclick="clean()">C</Button></td>
-                <td><Button onclick="clean('<')"><</Button></td>
+                <td><Button onclick="back()"><</Button></td>
                 <td><Button onclick="inserir('/')">/</Button></td>
                 <td><Button onclick="inserir('*')">x</Button></td>
             </tr>
@@ -36,7 +36,8 @@
                 <td><Button onclick="inserir('1')">1</Button></td>
                 <td><Button onclick="inserir('2')">2</Button></td>
                 <td><Button onclick="inserir('3')">3</Button></td>
-                <td rowspan="2"><Button class="glow-on-hover" type="button" style="height: 102px; background-color: rgb(168, 138, 40);">=</Button></td>
+                <td rowspan="2"><Button class="glow-on-hover" type="button" style="height: 102px; background-color: rgb(168, 138, 40);" 
+                    onclick="somar()">=</Button></td>
             </tr>
             <tr>
                 <td colspan="2"><Button style="width: 102px" onclick="inserir('0')">0</Button></td>
